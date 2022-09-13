@@ -1,18 +1,23 @@
 import React from 'react';
 import star from './images/star.png';
-import mtsf from './images/mtsf-tokyo.jpg';
 
-function Card(){
+function Card(props){
+    let badgeText;
+    if (props.item.openSpots === 0) {
+        badgeText = 'Sold Out';
+    } else if (props.item.location === 'Online') {
+        badgeText = 'Online';
+    }
     return(
         <article className='event-card'>
-            <p className='event-status'>Sold Out</p>
-            <img src={mtsf} className='event-thumb'/>
+            {badgeText && <p className='event-status'>{badgeText}</p>}
+            <img src={require("./images/" + props.item.coverImg)} className='event-thumb'/>
             <div className='event-rating'>
                 <img src={star} className='star-icon' />
-                <p>5.0 <span className='gray'>(7) • Japan</span></p>
+                <p>{props.item.stats.rating} <span className='gray'>({props.item.stats.reviewCount}) • {props.item.location}</span></p>
             </div>
-            <h4 className='event-title'>Making the Short Film</h4>
-            <p className='event-pricing'><strong>From ¥39,000</strong> / person</p>
+            <h4 className='event-title'>{props.item.title}</h4>
+            <p className='event-pricing'><strong>From ¥{props.item.price}</strong> / person</p>
         </article>
     );
 }

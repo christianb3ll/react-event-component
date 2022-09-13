@@ -12,6 +12,10 @@ h4 {
   font-weight: 300;
 }
 
+.gray {
+  color: #918E9B;
+}
+
 /* nav section */
 nav {
   display: flex;
@@ -56,6 +60,13 @@ section {
 
 /* event card section */
 
+.event-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
+
 .event-card {
   position: relative;
   display: flex;
@@ -83,6 +94,8 @@ section {
 }
 
 .event-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-bottom: 14px;
   margin-top: 2px;
 }
@@ -99,6 +112,7 @@ section {
   position: absolute;
   border-radius: 2px;
   font-size: 10.24px;
+  text-transform: uppercase;
   padding: 2px 4px;
   background-color: white;
   top: 3px;
