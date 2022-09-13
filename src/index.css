@@ -37,11 +37,30 @@ section {
 #hero-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .photo-grid {
-  align-self: center;
-  max-width: 800px;
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  align-items: center;
+}
+
+.phot-grid .col {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.photo-grid .col img {
+  display: flex;
+  border-radius: 9px;
+  margin: 20px;
+  max-width: 260px;
 }
 
 /* hero typography */
