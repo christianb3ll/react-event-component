@@ -38,11 +38,13 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 3em;
 }
 
 .photo-grid {
   display: flex;
-  width: 100%;
+  max-width: 100%;
+  height: 120vh;
   overflow-x: hidden;
   overflow-y: hidden;
   align-items: center;
@@ -136,4 +138,32 @@ section {
   background-color: white;
   top: 3px;
   left: 5px;
+}
+
+/* footer styles */
+footer {
+  background-color: #f8f8f8;
+  margin: 3em 0 0;
+  padding: 2em;
+}
+
+footer ul {
+  text-decoration: none;
+  text-align: right;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+footer ul li {
+  padding: 5px 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }

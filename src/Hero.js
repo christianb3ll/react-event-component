@@ -13,7 +13,7 @@ function Hero(){
                     <img src={require('./images/image-grid/freya-mtsf.jpg')}/>
                     <img src={require('./images/image-grid/directing-sq.jpg')}/>
                 </div>
-                <div className='col rellax' data-rellax-speed='2'>
+                <div className='col rellax' data-rellax-speed='2.5'>
                     <img src={require('./images/image-grid/ruby-mtsf.jpg')}/>
                     <img src={require('./images/image-grid/rory-mtsf.jpg')}/>
                 </div>
